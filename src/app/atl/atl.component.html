@@ -1,0 +1,23 @@
+<div class="container">
+  <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+    <p>
+      <label>Vehicle number: </label>
+      <input
+        type="text"
+        placeholder="vehicleNo"
+        formControlName="vehicleNo"
+        required
+      />
+    </p>
+    <p>
+      <label>Contact No:</label>
+      <input
+        type="text"
+        placeholder="ContactNo"
+        formControlName="contactNo"
+        required
+      />
+    </p>
+    <button type="Submit" [disabled]="!customerForm.valid">Submit</button>
+  </form>
+</div>
